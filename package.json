@@ -1,0 +1,42 @@
+{
+  "name": "vue-scroll",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/J-rookie/vue-scroll.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/J-rookie/vue-scroll/issues"
+  },
+  "homepage": "https://github.com/J-rookie/vue-scroll#readme",
+  "dependencies": {
+    "vue": "^2.1.10"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "babel": "^6.5.2",
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-runtime": "^6.20.0",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "vue-cli": "^2.8.1",
+    "vue-html-loader": "^1.2.3",
+    "vue-loader": "^10.3.0",
+    "vue-template-compiler": "^2.1.10",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
+  }
+}
