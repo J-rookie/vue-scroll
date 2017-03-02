@@ -7,6 +7,10 @@ config.plugins.push(new Webpack.DefinePlugin({
           }
         }))
 
+config.entry = {
+        './dist/vue-scroll':'./src/build2.js',
+    },
+
 config.devtool = false;
 
 module.exports = config;

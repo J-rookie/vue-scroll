@@ -2,7 +2,10 @@
 	<div class="view">
 		<div class="header">这是头部</div>
     	<scroll-view class="scroll-view" :topLoad="topLoadFun" :botLoad="botLoadFun">
-    		<div v-for="item in list">{{item}}</div>
+    		<div class="item" v-for="item in list">{{item}}</div>
+			<scroll-view class="children-view" :topLoad="topLoadFun" :botLoad="botLoadFun">
+	    		<div class="item" v-for="item in list">{{item}}</div>
+	    	</scroll-view>
     	</scroll-view>
 	</div>  
 </template>
@@ -26,7 +29,7 @@ export default {
 
 	methods:{
 		topLoadFun(){
-			console.log('上拉事件')
+			// console.log('上拉事件')
 			var l = 0;
 			this.list=[];
 			for(let i=l;i<l+20;i++){
@@ -34,7 +37,7 @@ export default {
 			}
 		},
 		botLoadFun(){
-			console.log('下拉事件')
+			// console.log('下拉事件')
 
 			var l = this.list.length;
 			if(l>=100){

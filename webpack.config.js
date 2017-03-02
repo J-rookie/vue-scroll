@@ -21,7 +21,7 @@ module.exports={
     },
     //产出文件配置
     output:{
-        path:path.join(__dirname),
+        //path:path.join(__dirname),
         filename: '[name].js',
         //publicPath: './dist/'
         // 公共文件生成的地址
@@ -45,12 +45,15 @@ module.exports={
             },
             {
               test: /\.js$/,
-              use: [
-                { loader: "babel-loader",
-
+              exclude: /node_modules/,
+              use:[{
+                loader: "babel-loader",
+                options:{
+                  presets : ['es2015','stage-0'],
+                  plugins : ['transform-runtime']
                 }
-              ],
-              exclude: /node_modules/
+
+              }]
             },
 
         ]

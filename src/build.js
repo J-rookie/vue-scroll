@@ -10,27 +10,28 @@ const install = function(Vue) {
 	        event.preventDefault();
   }, {passive:false});
   
-  Vue.component(VueView.name, VueView);
   Vue.directive('scroll', {
     bind:(el, binding, vnode, oldVnode)=>{
-      return scroll.init(el, binding, vnode, oldVnode)
+      el.scroll = new scroll();
+      return el.scroll.init(el, binding, vnode, oldVnode)
     },
     inserted:(el, binding, vnode, oldVnode)=>{
-      return scroll.update(el, binding, vnode, oldVnode)
+      return el.scroll.update(el, binding, vnode, oldVnode)
     },
     componentUpdated:(el, binding, vnode, oldVnode)=>{
-      return scroll.update(el, binding, vnode, oldVnode)
+      return el.scroll.update(el, binding, vnode, oldVnode)
     }
   });
 
-};
+  Vue.component(VueView.name, VueView);
 
+};
 
 if (typeof window !== 'undefined' && window.Vue) {
-  	install(window.Vue);
+    install(window.Vue);
 };
 
-export default {
-	install,
-	VueView
-}
+module.exports = {
+  install,
+  VueView,
+};
